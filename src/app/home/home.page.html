@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-title>
+      ToDo App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg-img">
+    
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="getTasks()" tab="all">
+          <ion-icon name="calendar"></ion-icon>
+          <ion-badge color='danger'>{{numberOfTasksUnchecked}}</ion-badge>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="getTasks()" tab="checked">
+          <ion-icon name="person-circle"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+    
+  </div>
+
+
+</ion-content>
+

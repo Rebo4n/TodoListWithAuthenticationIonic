@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">
+        email
+      </ion-label>
+      <ion-input type='text' [(ngModel)]="email"></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">
+        password
+      </ion-label>
+      <ion-input type='password' [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-button expand='block' shape="round" (click)="login()"> Login </ion-button>
+
+  <ion-row>
+    <ion-col col-6> 
+      <ion-button (click)="forgot()" color="secondary" class="my-width" large >
+        <b>Forget password</b>
+      </ion-button>
+    </ion-col>
+  
+    <ion-col col-6>
+      <ion-button (click)="register()" color="success" class="my-width" large>
+        <b>Signup</b>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
